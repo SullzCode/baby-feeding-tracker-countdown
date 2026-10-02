@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff7f2">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<title>Baby Feeding Tracker</title>
+</head>
+<body>
+<main class="app">
+<header>
+  <div><p class="eyebrow">BABY CARE</p><h1>🍼 Feeding tracker</h1></div>
+  <button id="notifyBtn" class="small">🔔 Enable</button>
+</header>
+
+<section class="card hero">
+  <p>Next feeding countdown</p>
+  <div id="countdown" class="countdown">--:--:--</div>
+  <div id="countdownLabel" class="muted">Set a reminder below</div>
+  <button id="feedBtn" class="feed">🍼 Log feeding now</button>
+</section>
+
+<section class="card">
+  <h2>⏰ Reminder interval</h2>
+  <div class="row">
+    <label>Hours
+      <select id="hours">
+        <option value="0">0</option><option value="1">1</option>
+        <option value="2" selected>2</option><option value="3">3</option>
+        <option value="4">4</option><option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </label>
+    <label>Minutes
+      <select id="minutes">
+        <option value="0" selected>00</option><option value="15">15</option>
+        <option value="30">30</option><option value="45">45</option>
+      </select>
+    </label>
+  </div>
+  <button id="alarmBtn" class="primary">Set countdown</button>
+  <button id="cancelBtn" class="secondary">Cancel countdown</button>
+  <div id="alarmStatus" class="status">No reminder set</div>
+</section>
+
+<section class="card">
+  <div class="historyHead"><h2>Today's feedings</h2><button id="clearBtn" class="textBtn">Clear</button></div>
+  <div id="history" class="history"><p class="muted">No feedings recorded today.</p></div>
+</section>
+
+<p class="note">Times are saved on this phone. The countdown is calculated from the saved target time.</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
