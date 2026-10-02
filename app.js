@@ -149,11 +149,12 @@ function setCountdown(){
   }
 }
 
-$("feedBtn").onclick=()=>{
+$("feedBtn").addEventListener("click",function(){
   const feeds=getFeeds();
   feeds.push(Date.now());
   saveFeeds(feeds);
   renderHistory();
+});
 
   // Logging a feed does not automatically overwrite an existing countdown.
 };
